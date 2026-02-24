@@ -828,6 +828,18 @@ client.once("ready", () => {
 
 client.login(token);
 
+// keep-alive http server so Railway treats this as a service
+import http from "http";
+
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("Ranch bot running");
+}).listen(PORT, () => {
+  console.log("Health server running on port", PORT);
+});
+
 
 
 
