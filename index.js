@@ -22,7 +22,7 @@ const client = new Client({
 });
 
 // ----------------- Database & migration -----------------
-const db = new Database("ranch.sqlite");
+const db = new Database("/data/ranch.sqlite");
 
 // create base table if not exists (we'll migrate columns if needed)
 db.exec(`
