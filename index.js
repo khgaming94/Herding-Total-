@@ -2,7 +2,6 @@
 // Ranch Discord bot — collects milk/eggs/herding from webhook messages and produces reports
 import { Client, GatewayIntentBits, Partials, PermissionsBitField } from "discord.js";
 import Database from "better-sqlite3";
-import fetch from "node-fetch"; // node 18+ may have global fetch; this is for safety
 import http from "http";
 
 // ================= CONFIG =================
